@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CityController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::prefix('cms/admain')->group(function() {
-    Route::view('/','cms.temb');
+    Route::view('/','cms.parant');
+    Route::resource('cities',CityController::class);
 
 });

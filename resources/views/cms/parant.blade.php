@@ -3,7 +3,7 @@
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{asset('cms/dist/css/adminlte.min.css')}}">
   @yield('styles')
 </head>
-Starter Page<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini">
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -216,17 +216,34 @@ Starter Page<body class="hold-transition sidebar-mini">
                   <p>Inactive Page</p>
                 </a>
               </li>
-            </ul>
-          </li>
-          <li class="nav-item">
+              <li class="nav-header">{{__('cms.content_management')}}</li>
+              <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon far fa-envelope"></i>
               <p>
-                Simple Link
-                <span class="right badge badge-danger">New</span>
+                {{__('cms.cities')}}
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('cities.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{{__('cms.index')}}</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../mailbox/compose.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{{__('cms.create')}}</p>
+                </a>
+              </li>
+
+            </ul>
           </li>
+            </ul>
+          </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
