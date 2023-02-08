@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::prefix('cms/admain')->group(function() {
+    Route::view('/','cms.temb');
+
+});
