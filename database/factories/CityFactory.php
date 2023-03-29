@@ -19,7 +19,7 @@ class CityFactory extends Factory
         return [
             'name_en' => $this->faker->city(),
             'name_an' => $this->faker->city(),
-            'active' => $this->faker->boolean(50),  
+            'active' => $this->faker->boolean(50),
             //
         ];
     }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,5 +22,6 @@ Route::get('/', function () {
 Route::prefix('cms/admain')->group(function() {
     Route::view('/','cms.parant');
     Route::resource('cities',CityController::class);
+    Route::resource('users',UserController::class);
 
 });
